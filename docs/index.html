@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>선진 모작</title>
+
+  <!-- 테일윈드 불러오기 -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- 제이쿼리 불러오기 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- 공통 js 연결 -->
+  <script defer src="script/script.js"></script>
+
+<!-- 공통 css 연결 -->
+<link rel="stylesheet" href="style/style.css">
+
+</head> 
+<body>
+  <div class="header-wrap">
+<!-- 헤더 -->
+<header class="top-bar h-[100px] con-min-width">
+	<div class="con flex mx-auto h-full justify-between">
+		<div class="logo-box">
+			<a href="#" class="logo h-full flex items-center">
+				<img src="https://www.sunjin.co.kr/wp-content/themes/sunjin/assets/images/logo.svg" alt="선진 로고">
+			</a>
+		</div>		
+		<div class="menu-1">
+			<ul class="flex h-full">
+				<li>
+					<a class="flex h-full px-[32px] items-center text-lg whitespace-nowrap" href="#">About</a>
+					<ul>
+						<li><a href="#">Overview</a></li>
+						<li><a href="#">History</a></li>
+						<li><a href="#">Lisences</a></li>
+					</ul>
+				</li>
+				<li>
+					<a class="flex h-full px-[32px] items-center text-lg whitespace-nowrap" href="#">Our Works</a>
+					<ul>
+						<span><a href="#">Engineering</a></span>
+						<li><a href="#">물</a></li>
+						<li><a href="#">에너지</a></li>
+						<li><a href="#">플랜트</a></li>
+						<li><a href="#">EIA</a></li>
+						<li><a href="#">도로·철도</a></li>
+						<li><a href="#">도시</a></li>
+						<li><a href="#">조경</a></li>
+						<li><a href="#">전력</a></li>
+						<li><a href="#">CM</a></li>
+						<li><a href="#">해외</a></li>
+						<span><a href="#">Architecture</a></span>
+						<li><a href="#">설계</a></li>
+						<li><a href="#">CM</a></li>
+						<li><a href="#">해외</a></li>
+					</ul>
+				</li>
+				<li><a class="flex h-full px-[32px] items-center text-lg whitespace-nowrap" href="#">PR Center</a>
+					<ul>
+						<li><a href="#">News</a></li>
+						<li><a href="#">Research</a></li>
+						<li><a href="#">PR</a></li>
+						<li><a href="#">CI</a></li>
+					</ul>
+				</li>
+				<li><a class="flex h-full px-[32px] items-center text-lg whitespace-nowrap" href="#">Recruitment</a>
+					<ul>
+						<li><a href="#">직무소개</a></li>
+						<li><a href="#">복리후생</a></li>
+						<li><a href="#">채용절차</a></li>
+						<li><a href="#">채용공고</a></li>
+					</ul>
+				</li>
+				<li><a class="flex h-full px-[32px] items-center text-lg whitespace-nowrap" href="#">Contact</a></li>
+			</ul>
+		</div>
+		<div class="top-bar-btn flex text-sm items-center gap-x-[20px]">
+			<ul class="flex voca-choice-btn mr-[15px] gap-x-[7px]">
+				<li class="font-semibold voca-en voca__en whitespace-nowrap"><a href="#">English</a></li>
+				<li class="font-semibold voca-ko whitespace-nowrap"><a href="#">한국어</a></li>
+			</ul>
+			<a class="top-bar-icon-bookmark w-[18px] h-[25px]" href="#">
+				<img src="https://www.sunjin.co.kr/wp-content/themes/sunjin/assets/images/bookmark_btn.svg" alt="북마크 로고">
+				<img src="https://www.sunjin.co.kr/wp-content/themes/sunjin/assets/images/bookmark_btn_over.svg" alt="북마크 로고 색상 변경">
+			</a>
+			<a class="top-bar-icon-search w-[26px] h-[26px]" href="#">
+				<img src="https://www.sunjin.co.kr/wp-content/themes/sunjin/assets/images/search_btn.svg" alt="검색 로고">
+				<img src="https://www.sunjin.co.kr/wp-content/themes/sunjin/assets/images/search_btn_over.svg" alt="검색 로고 색상 변경">
+			</a>
+		</div>
+	</div>	
+</header>
+  </div>
+  
+
+<!-- 검색 바 구현 -->
+<div id="top-bar-pop" class="pop-wrap fixed">
+	<div class="head-search-bar relative">
+		<div class="con mx-auto h-[124px] flex items-center">
+			<h1 class="logo-box">
+				<a href="#" class="logo">
+					<img src="https://www.sunjin.co.kr/wp-content/themes/sunjin/assets/images/logo.svg" alt="선진 로고">
+				</a>
+			</h1>
+			<button class="close-btn mt-[-25px] ml-auto"></button>
+		</div>
+		<h2 class="pop-word text-[40px] text-center">Search</h2>
+		<div class="search-inner relative">
+			<input class="search-inner-keyword w-full" type="text" placeholder="검색어를 입력해주세요.">
+			<button class="search-inner-btn absolute"></button>
+		</div>
+	</div>
+</div>
+
+<!-- 중단 -->
+<section class="main">
+	<div class="banner-bar">
+		<div class="con mx-auto">
+			<ul class="flex">
+				<li class="open-pop-up-red relative cursor-pointer flex-1">
+					<div class="title-box absolute flex flex-col font-bold">
+						<span class="pop-voca-en text-white">Engeneering</span>
+						<span class="pop-voca-ko text-white">토목</span>
+					</div>
+					<div class="bg">
+						<img src="images/이미지들08.jpg" alt="빨간색 오픈 팝업">
+					</div>
+				</li>
+				<li class="open-pop-up-orange relative cursor-pointer flex-1">
+					<div class="title-box absolute flex flex-col font-bold">
+						<span class="pop-voca-en text-white">Architecture</span>
+						<span class="pop-voca-ko text-white">건축</span>
+					</div>
+					<div class="bg">
+						<img src="images/이미지들09.jpg" alt="주황색 오픈 팝업">
+					</div>
+				</li>
+			</ul>
+			<div class="main-search-box relative">
+				<div class="search-bar">
+					<input class="search-board-keyword bg-white w-full" type="text" placeholder="선진의 다양한 프로젝트를 검색하세요.">
+					<button class="search-btn absolute"></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="block-banner">
+		<div class="con mx-auto relative">
+			<ul class="flex flex-wrap">
+				<li class="width-50">
+					<a href="#">
+						<p class="relative bold">About Us</p>
+						<span>회사소개</span>
+						<div class="svg-ic mt-[0] flex justify-end">
+							<svg viewBox="0 0 51 72" fill="none" xmlns="http://www.w3.org/2000/svg" id="svgani1">
+								<path d="M15 69.9443V48.3227L37.4457 34.2146V69.9443L50 63.1335V29.566L25.462 9.94434V69.9443" stroke="url(#paint0_linear_1684_53329)" stroke-width="2"></path>
+								<defs>
+									<linearGradient id="paint0_linear_1684_53329" x1="11.925" y1="9.94433" x2="63.8506" y2="77.6905" gradientUnits="userSpaceOnUse">
+										<stop stop-color="#F27604"></stop>
+										<stop offset="0.463542" stop-color="#F08200"></stop>
+										<stop offset="1" stop-color="#FFB053"></stop>
+									</linearGradient>
+								</defs>
+							</svg>
+						</div>
+					</a>
+				</li>
+				<li class="width-25">
+					<a href="#">
+						<p>Recruitment</p>
+						<span>채용</span>
+						<div class="svg-ic mt-[0] flex justify-end">
+							<svg viewBox="0 0 52 70" fill="none" xmlns="http://www.w3.org/2000/svg" id="svgani2">
+								<path d="M35.556 22.832H21.6671V35.0543H35.556L50.0004 63.9431H7.22266L35.556 27.832" stroke="url(#paint0_linear_1684_51921)" stroke-width="2"></path>
+								<defs>
+									<linearGradient id="paint0_linear_1684_51921" x1="3.46432" y1="22.832" x2="30.1927" y2="85.0359" gradientUnits="userSpaceOnUse">
+										<stop stop-color="#F27604"></stop>
+										<stop offset="0.463542" stop-color="#F08200"></stop>
+										<stop offset="1" stop-color="#FFB053"></stop>
+									</linearGradient>
+								</defs>
+							</svg>
+						</div>
+					</a>
+				</li>
+				<li class="width-25">
+					<a href="">
+						<p>PR</p>
+						<span>홍보센터</span>
+						<div class="svg-ic mt-[0] flex justify-end">
+							<svg viewBox="0 0 52 70" fill="none" xmlns="http://www.w3.org/2000/svg" id="svgani3">
+								<path d="M12.7773 46.1369V36.1369L30.6465 46.1369L30.6465 55.0667L49.8418 66.9457L49.9996 19.168L23.0817 31.0471V55.0667" stroke="url(#paint0_linear_1684_32906)" stroke-width="2"></path>
+								<defs>
+									<linearGradient id="paint0_linear_1684_32906" x1="9.50711" y1="19.168" x2="46.4781" y2="83.5885" gradientUnits="userSpaceOnUse">
+										<stop stop-color="#F27604"></stop>
+										<stop offset="0.463542" stop-color="#F08200"></stop>
+										<stop offset="1" stop-color="#FFB053"></stop>
+									</linearGradient>
+								</defs>
+							</svg>
+						</div>
+					</a>
+				</li>
+				<li class="width-25"><a href="#">
+					<p>Research</p>
+					<span>연구</span>
+					<div class="svg-ic mt-[0] flex justify-end">
+						<svg viewBox="0 0 51 70" fill="none" xmlns="http://www.w3.org/2000/svg" id="svgani4">
+							<path d="M20.4128 50.8572H49.9987V20.6094H14.5148V57.5715H49.9987V63.9427H13.332" stroke="url(#paint0_linear_1684_33956)" stroke-width="2"></path>
+							<defs>
+								<linearGradient id="paint0_linear_1684_33956" x1="10.1106" y1="20.6094" x2="42.1945" y2="81.3281" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#F27604"></stop>
+									<stop offset="0.463542" stop-color="#F08200"></stop>
+									<stop offset="1" stop-color="#FFB053"></stop>
+								</linearGradient>
+							</defs>
+						</svg>
+					</div>
+					</a></li>
+				<li class="width-25"><a href="#">
+					<p>News</p>
+					<span>소식</span>
+					<div class="svg-ic mt-[0] flex justify-end">
+						<svg viewBox="0 0 51 70" fill="none" xmlns="http://www.w3.org/2000/svg" id="svgani5">
+							<path d="M40.5 37.0882H50V61.6765H12V22H34.3529V47.7059H19.8235V37.0882H28.7647" stroke="url(#paint0_linear_1684_32890)" stroke-width="2"></path>
+							<defs>
+								<linearGradient id="paint0_linear_1684_32890" x1="8.66143" y1="22" x2="35.9207" y2="80.3917" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#F27604"></stop>
+									<stop offset="0.463542" stop-color="#F08200"></stop>
+									<stop offset="1" stop-color="#FFB053"></stop>
+								</linearGradient>
+							</defs>
+						</svg>
+					</div>
+					</a></li>
+				<li class="width-50"><a href="#">
+					<p>Contact Us</p>
+					<span>문의하기</span>
+					<div class="svg-ic mt-[0] flex justify-end">
+						<svg viewBox="0 0 51 70" fill="none" xmlns="http://www.w3.org/2000/svg" id="svgani6">
+							<path d="M50.0004 52.9255V24.168H2.22266V52.9255H32.0746L40.0822 61.9457V43.3017H11.9705V34.2815H40.0822" stroke="url(#paint0_linear_1684_44290)" stroke-width="2"></path>
+							<defs>
+								<linearGradient id="paint0_linear_1684_44290" x1="-1.97496" y1="24.168" x2="19.3043" y2="84.3591" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#F27604"></stop>
+									<stop offset="0.463542" stop-color="#F08200"></stop>
+									<stop offset="1" stop-color="#FFB053"></stop>
+								</linearGradient>
+							</defs>
+						</svg>
+					</div>
+					</a></li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<!-- 메인 검색 바 구현 -->
+<div id="main-pop-red" class="pop-wrap fixed">
+	<div class="main-menu-bar absolute">
+		<button class="close-btn"></button>
+		<div class="pop-content">
+			<span>Our Works</span>
+			<h2>ENGINEERING</h2>
+			<div class="option-scroll">
+				<ul class="pop-list flex-grid">
+					<li class="btn-pop-word">물</li>
+					<li class="btn-pop-word">에너지</li>
+					<li class="btn-pop-word">플랜트</li>
+					<li class="btn-pop-word">EIA</li>
+					<li class="btn-pop-word">도로·철도</li>
+					<li class="btn-pop-word">도시</li>
+					<li class="btn-pop-word">조경</li>
+					<li class="btn-pop-word">전력</li>
+					<li class="btn-pop-word">CM</li>
+					<li class="btn-pop-word">해외</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="main-pop-orange" class="pop-wrap fixed">
+	<div class="main-menu-bar absolute">
+		<button class="close-btn"></button>
+		<div class="pop-content">
+			<span>Our Works</span>
+			<h2>ARCHITECTURE</h2>
+			<div class="option-scroll">
+				<ul class="pop-list flex-grid">
+					<li class="btn-pop-word">설계</li>
+					<li class="btn-pop-word">CM</li>
+					<li class="btn-pop-word">해외</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 하단 -->
+<footer class="py-14 con-min-width">
+	<div class="con mx-auto">
+		<ul class="mb-[80px]">
+			<li class="text-black">선진엔지니어링종합건축사사무소</li>
+		</ul>
+		<ul class="flex flex-nowrap justify-between">
+			<li class="info-box">
+				<div class="link flex flex-nowrap mb-[20px]">
+					<a href="#" class="!pl-0">개인정보처리방침</a>
+					<a href="#">이용약관</a>
+				</div>
+				<p class="mb-[12px]">13840 경기도 과천시 과천대로7길 20 B타워 5층 (갈현동, 과천 스마트케이 업무시설)
+				</p>
+				<p class="info-text flex flex-wrap">
+					<span>Tel &nbsp;</span>
+					<a>02-6333-3000</a>
+					<span>Fax &nbsp;</span>
+					<a>02-6332-3000</a>
+					<span>E-mail &nbsp;</span>
+					<a>sinjin@sunjin.co.kr</a>
+				</p>
+			</li>
+			<li class="link-box pl-[9px] flex flex-col justify-end">
+				<div class="link flex justify-end">
+					<a href="#">웹하드</a>
+					<a href="#">그룹웨어</a>
+				</div>
+				<p class="copy flex justify-end mt-[12px]">©2023 SUNJIN All Rights Reserved</p>
+			</li>
+		</ul>
+	</div>
+</footer>
+</body>
+</html>

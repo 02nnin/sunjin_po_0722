@@ -1,0 +1,521 @@
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+body {
+font-family: 'Pretendard-Regular';
+background-color: #f8f8f8;
+}
+/* 라이브러리 클래스 */
+.con-min-width {
+min-width: 1500px;
+}
+
+.flex-grid {
+display:flex;
+flex-wrap:wrap;
+--y-gap:0px;
+--x-gap:0px;
+--cc:5;
+gap:var(--y-gap) var(--x-gap);
+}
+
+.con {
+width: 1500px;
+padding: 0 50px;
+}
+
+.logo {	
+width: 142px;
+}
+
+.menu-1 {
+font-weight: bold;
+}
+
+/* 1차 메뉴 */
+.menu-1 > ul {
+}
+
+/* 1차 메뉴 아이템 */
+.menu-1 > ul > li {
+position: relative;
+}
+
+/* 2차 메뉴 */
+.menu-1 > ul > li > ul {
+position: absolute;
+display: none;
+background-color: white;
+padding: 20px 15px;
+border-radius: 20px;
+width: 200px;
+left: 50%;
+transform: translateX(-50%);
+margin-top: -12px;
+box-shadow: 4px 4px 60px rgba(90, 90, 90, 0.08);
+white-space: nowrap;
+z-index: 100;
+}
+
+/* 2차 메뉴 아이템 */
+.menu-1 > ul > li > ul > li {
+margin: 13px;
+}
+/* 2차 메뉴 span */
+.menu-1 > ul > li > ul > span {
+margin: 13px;
+}
+
+/* 2번째 2차 메뉴 아이템 */
+.menu-1 > ul > li:nth-child(2) > ul > li {
+font-size: 14px;
+}
+
+/* 2차 메뉴 아이템 텍스트 */
+.menu-1 > ul > li > ul > li > a {
+transition: color 0.2s;
+color: #888;
+}
+
+/* hover되었을 때 2차메뉴 */
+.menu-1 > ul > li:hover > ul {
+display: block;
+}
+
+/* hover되었을 때 2차 메뉴 아이템 텍스트 */
+.menu-1 > ul > li > ul > li:hover > a {
+color: #ff6900;
+}
+
+/* 한글/영어 단어 색깔 */
+.voca-ko {
+color: black;
+}
+
+.voca-en {
+color: #888;
+}
+
+/* 아이콘 색 변경 */
+.top-bar-icon-bookmark:hover > img:nth-child(1) {
+display: none;
+}
+
+.top-bar-icon-bookmark > img:nth-child(2) {
+display: none;
+}
+
+.top-bar-icon-bookmark:hover > img:nth-child(2) {
+display: inline-block;
+}
+
+.top-bar-icon-search:hover > img:nth-child(1) {
+display: none;
+}
+
+.top-bar-icon-search > img:nth-child(2) {
+display: none;
+}
+
+.top-bar-icon-search:hover > img:nth-child(2) {
+display: inline-block;
+}
+
+/* 상단 검색 바 */
+.pop-wrap {
+background: rgba(0, 0, 0, 0.75);
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+opacity: 0;
+visibility: hidden;
+transition: opacity 0.5s, visibility 0.5s;
+z-index: 1000;
+}
+/* 검색 창 */
+.pop-wrap.active {
+opacity: 1;
+visibility: visible;
+}
+
+.head-search-bar {
+border-radius: 0px 0px 40px 40px;
+height: 495px;
+background-color: white;
+}
+
+.close-btn {
+background: url(https://www.sunjin.co.kr/wp-content/themes/sunjin/assets/images/ic_x.svg;)
+  no-repeat;
+background-size: contain;
+cursor: pointer;
+width: 26px;
+height: 26px;
+}
+
+.pop-word {
+margin: 50px 40px;
+font-weight: 700;
+}
+
+/* 검색창 항목 */
+.search-inner {
+width: 1000px;
+height: 96px;
+margin: 0 auto;
+}
+
+.search-inner-keyword {
+padding: 30px 48px;
+font-size: 24px;
+background: #f0f0f0;
+border-radius: 999px;
+outline: 0;
+font-weight: 600;
+}
+
+.search-inner-btn {
+background: url(https://www.sunjin.co.kr/wp-content/themes/sunjin/assets/images/search.svg)
+  no-repeat;
+background-size: contain;
+width: 45px;
+height: 45px;
+transform: translateY(-50%);
+top: 50%;
+right: 3%;
+}
+
+/* 메인 */
+.main {
+padding-top: 40px;
+background-color: #f8f8f8;
+}
+
+/* 위 베너 */
+.banner-bar {
+margin-bottom: 40px;
+}
+
+/* 위 베너의 ul */
+.banner-bar > .con > ul {
+gap: 0 24px;
+}
+
+/* 위 베너의 li */
+.banner-bar ul li {	
+height: 240px;
+}
+
+.banner-bar ul li > .bg {
+height: 100%;
+}
+
+.banner-bar ul li div img {	
+border-radius: 20px;		
+width: 100%;
+}
+/* 팝업의 크기 */
+
+
+/* 팝업 안에 들어가는 글자 */
+.title-box {
+left: 40px;
+bottom: 40px;
+}
+
+/* 팝업 안에 들어가는 글자 크기 조절 */
+.pop-voca-en {
+font-size: 17px;
+}
+
+.pop-voca-ko {
+font-size: 30px;
+padding-top: 20px;
+}
+
+/* 검색창 */
+.main-search-box {
+margin-top: 40px;
+overflow: visible;
+}
+
+/* 검색창 항목 */
+.search-board-keyword {
+padding: 36px; 50px;
+border-radius: 20px;
+font-size: 28px;
+outline: 0;
+font-weight: 600;
+}
+
+/* 검색창 돋보기 */
+.search-btn {
+right: 48px;
+background: url(https://www.sunjin.co.kr/wp-content/themes/sunjin/assets/images/main-btn-search.svg)
+  no-repeat;
+background-size: contain;
+width: 58px;
+height: 58px;
+transform: translateY(-50%);
+top: 50%;
+}
+
+/* 아래 베너 */
+.block-banner {
+padding-bottom: 160px;
+}
+
+/* 메인 팝업 창*/
+.pop-wrap .pop-list {
+--y-gap: 24px;
+--x-gap: 24px;		
+}
+
+.main-pop-red .pop-wrap .pop-list {
+justify-content: center;
+}
+
+.main-menu-bar .close-btn {
+background: url(https://www.sunjin.co.kr/wp-content/themes/sunjin/assets/images/ic_x.svg;)
+  no-repeat;
+background-size: contain;
+position: absolute;
+top: 50px;
+right: 50px;
+width: 30px;
+height: 30px;
+background-size: contain;
+cursor: pointer;
+}
+
+.main-menu-bar {
+left: 50%;
+bottom: 0;
+top: auto;
+transform: translate(-50%, 0);
+max-width: 1400px;
+width: 100%;
+height: 506px;
+background: #f8f8f8;
+border-radius: 40px 40px 0px 0px;
+padding: 74px 77px;
+}
+
+.pop-content {
+text-align: center;
+}
+
+.pop-content > span {
+font-size: 18px;
+color: #f08200;
+font-weight: 600;
+line-height: 1.8;
+}
+
+.pop-content > h2 {
+margin-bottom: 16px;
+font-weight: 700;
+line-height: 1.6;
+text-align: center;
+letter-spacing: -0.05em;
+font-size: 36px;
+}
+
+.option-scroll {
+width: 1120px;
+margin: 56px auto 0;
+}
+
+.btn-pop-word {
+display: flex;
+flex-wrap: nowrap;
+align-items: center;
+justify-content: center;
+width: calc(20% - 24px);
+height: 80px;
+background: #ffffff;
+border: 1px solid #f8f8f8;
+box-shadow: 2px 2px 30px rgba(90, 90, 90, 0.08);
+border-radius: 10px;
+cursor: pointer;
+font-weight: 600;
+font-size: 20px;
+line-height: 1;
+}
+
+.main-menu-bar .option-scroll .btn-pop-word:hover {
+background-color: #ff6900;
+color: white;
+}
+
+/* 아래 베너의 li */
+.block-banner ul li:nth-child(3n) {
+margin: 0 0 24px 0;
+}
+.block-banner ul li:nth-child(1) {
+margin: 0 24px 24px 0;
+}
+.block-banner ul li:nth-child(2) {
+margin: 0 24px 24px 0;
+}
+.block-banner ul li:nth-child(4) {
+margin: 0 24px 24px 0;
+}
+.block-banner ul li:nth-child(5) {
+margin: 0 24px 24px 0;
+}
+
+/* 아래 베너 li 중 width-50 */
+.block-banner ul .width-50 {
+width: 688px;
+}
+
+/* 아래 베너 li 중 width-25 */
+.block-banner ul .width-25 {
+width: 332px;
+}
+
+/* 아래 베너의 a */
+.block-banner ul li a {
+padding: 40px;
+border-radius: 20px;
+background: #ffffff;
+box-shadow: 4px 4px 60px rgba(90, 90, 90, 0.08);
+display: block;
+}
+
+/* 아래 베너의 p */
+.block-banner ul li a p {
+padding-bottom: 20px;
+font-size: 28px;
+font-weight: 700;
+}
+
+/* 아래 베너의 span */
+.block-banner ul li a span {
+font-size: 18px;
+display: block;
+font-weight: 600;
+color: #999999;
+}
+
+
+/* 아래 베너 그림 */
+.block-banner ul li a .svg-ic svg {
+width: 50px;
+height: 70px;
+}
+
+/* svg */
+
+.svg-ic > svg {
+stroke-dasharray: 500;
+stroke-dashoffset: 500;
+animation: dash 3s linear forwards;
+}
+
+@keyframes dash {
+100% {
+  stroke-dashoffset: 0;
+}
+}
+
+
+
+footer > div > ul:nth-child(1) > li {
+font-weight: 700;
+font-size: 22px;
+}
+
+footer > div > ul:nth-child(2) > li:nth-child(1) > div > a:nth-child(1) {
+color: #f08200;
+}
+
+footer div ul li p {
+font-size: 12px;
+line-height: 1.3;
+}
+
+.info-box .link > a {
+display: block;
+padding: 0 10px;
+position: relative;
+font-weight: 600;
+}
+
+.info-box .link > a:not(:last-child)::after {
+content: "";
+position: absolute;
+height: 12px;
+width: 1px;
+background-color: #d9d9d9;
+top: 50%;
+transform: translateY(-48%);
+right: -1.7px;
+}
+
+.info-box .info-text > a {
+padding: 0 10px 0 0;
+display: block;
+position: relative;
+}
+
+.info-box .info-text > a:not(:last-child)::after {
+content: "";
+position: absolute;
+height: 12px;
+width: 1px;
+background-color: #d9d9d9;
+top: 50%;
+transform: translateY(-44%);
+right: 4.3px;
+}
+
+.link-box {
+font-size: 14px;
+font-weight: 400;
+color: black;
+}
+
+.link-box > .link > a {
+transition: color 0.2s;
+position: relative;
+}
+
+.link-box > .link > a:nth-child(1) {
+padding: 0 5px 0 0;
+}
+
+.link-box > .link > a:nth-child(2) {
+padding: 0 0 0 5px;
+}
+
+.link-box .link > a:not(:last-child)::after {
+content: "";
+position: absolute;
+height: 12px;
+width: 1px;
+background-color: #d9d9d9;
+top: 50%;
+transform: translateY(-44%);
+right: 0px;
+}
+
+.link-box > div > a:hover {
+color: #ff6900;
+}
+
+.copy {
+font-size: 12px;
+color: #999999;
+}
+
+footer {
+background-color: white;
+}
